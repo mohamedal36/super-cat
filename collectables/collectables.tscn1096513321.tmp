@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://w72icx6s634c"]
+
+[ext_resource type="Texture2D" uid="uid://4jn6mxd87c51" path="res://sunny-land/assets/atlas/atlas.png" id="1_7etn0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t7rdo"]
+radius = 9.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mwsl"]
+atlas = ExtResource("1_7etn0")
+region = Rect2(175, 0, 25, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qxij2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mwsl")
+}],
+"loop": true,
+"name": &"apple",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_7etn0"]
+script/source = "extends AnimatedSprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	#self.queue_free(); # Replace with function body.
+	pass
+"
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_t7rdo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
+position = Vector2(-1, 0)
+sprite_frames = SubResource("SpriteFrames_qxij2")
+animation = &"apple"
+frame_progress = 0.138621
+script = SubResource("GDScript_7etn0")
+
+[connection signal="area_shape_entered" from="." to="CollisionShape2D/AnimatedSprite2D" method="_on_area_2d_area_shape_entered"]

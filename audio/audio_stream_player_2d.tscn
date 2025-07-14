@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://jnuhr308ry0o"]
+
+[ext_resource type="AudioStream" uid="uid://cefxdtrp43e32" path="res://sunny-land/assets/sound/platformer_level03_loop.ogg" id="1_okjxc"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_okjxc")
+autoplay = true
+parameters/looping = true
