@@ -1,13 +1,14 @@
 # 🐱 Super Cat - A Godot Game
 
+<img width="1155" height="647" alt="image" src="https://github.com/user-attachments/assets/6c4c3f7f-439d-4ab2-affb-4c33df508559" />
+
+
 Welcome to **Super Cat**, a 2D platformer game made with the [Godot Engine](https://godotengine.org/)!  
-Help our heroic feline leap over obstacles, defeat enemies, and collect fish treats on a mission to save the world.
+Help our heroic feline leap over obstacles, defeat enemies
 
 ## 🎮 Gameplay
 
 - Play as **Super Cat**, a brave feline with super agility.
-- Explore vibrant levels filled with traps, enemies, and secrets.
-- Use power-ups to fly, dash, and unleash a mighty meow attack.
 - Collect golden fish to boost your score and unlock hidden levels.
 
 ## 🛠 Built With
